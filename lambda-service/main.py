@@ -37,23 +37,24 @@ def simpleEndRhymeComparison(lines):
 def phoneticEndRhymeComparison(lines):
 
     output = [pronouncing.rhymes(lines[0]),pronouncing.rhymes(lines[1])]
-    outputD = {0: pronouncing.rhymes(lines[0]), 1: pronouncing.rhymes(lines[1])}
 
-    # print(outputD)
-    # if outputD[0] != outputD[1]:
-    #     print('This has passed the complex rhyme test.')
-    # else:
-    #     print(outputD[0], " ", outputD[1])
-
-    # set(output[0]).intersection(output[1])
-    # set([5])
 
     test_list1 = output[0]
     test_list2 = output[1]
 
     test_list1 = [str(r) for r in test_list1]
     test_list2 = [str(r) for r in test_list2]
-    
+
+    print('Attempting to add ' + lines[0] + ' to array')
+    print(test_list1)
+
+    test_list1 = test_list1.extend(lines[1])
+    print(test_list1)
+
+
+
+    # print test_list1
+
     # printing lists
     print ("The first list is : " + str(test_list1))
     print ("The second list is : " + str(test_list2))
@@ -78,7 +79,3 @@ if __name__ == "__main__":
     #
     # print(output1)
     # print(output2)
-
-
-
-    phoneticEndRhymeComparison(lines)
