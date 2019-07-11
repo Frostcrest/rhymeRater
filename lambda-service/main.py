@@ -1,18 +1,6 @@
 import pronouncing
-from collections import Counter
 
 def stringComparison():
-
-    text = "april is the cruelest month breeding lilacs out of the dead"
-    count = Counter()
-    words = text.split()
-    for word in words:
-       pronunciation_list = pronouncing.phones_for_word(word)
-       if len(pronunciation_list) > 0:
-         count.update(pronunciation_list[0].split(" "))
-
-    output = count.most_common(5)
-    print(output)
 
     line1 = raw_input("Enter the first line. ")
     type(line1)
@@ -35,9 +23,13 @@ def simpleEndRhymeComparison(lines):
     #Get length of sentences
     lengths = (len(lines[0]),len(lines[1]))
 
-    #print last two consonants for comparison
+    #assign last two consonants for comparison
     lastTwo1 = (L1[lengths[0]-2], L1[lengths[0]-1])
     lastTwo2 = (L2[lengths[0]-2], L2[lengths[0]-1])
+
+# Print for debugging purposes
+    # print(lastTwo1)
+    # print(lastTwo2)
 
     #Compare the last two
     if lastTwo1 == lastTwo2:
