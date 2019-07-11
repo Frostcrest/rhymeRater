@@ -3,12 +3,12 @@ rhymeRater is a lightweight rhyme analyzer. Text can be input and analyzed to de
 
 
 
-~==Architecture==~
+-==Architecture==-
 
 The foundation of rhymeRater is the phonetic dictionary. If a word has the same phonetic value based on the position in the text input, then a positive value will be assigned to that match. 
 
 
-~==Roadmap==~
+-==Roadmap==-
 
 The following features are planned:
 
